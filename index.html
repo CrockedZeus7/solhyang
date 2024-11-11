@@ -81,12 +81,12 @@
   <script>
     // WebSocket 클라이언트 연결
     const socket = new WebSocket('ws://localhost:8080');
-
+  
     // 서버에서 혼잡도 업데이트 메시지를 받을 때마다 해당 부스의 혼잡도 업데이트
     socket.addEventListener('message', function (event) {
       const data = JSON.parse(event.data);
       const boothCards = document.querySelectorAll('.booth-card');
-
+  
       boothCards.forEach(card => {
         const boothName = card.querySelector('h2').innerText;
         if (boothName === data.boothName) {
@@ -96,6 +96,25 @@
         }
       });
     });
+  
+    // 페이지가 로드되면 localStorage에서 혼잡도 데이터를 확인하여 초기화
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedCongestion = localStorage.getItem('congestionData');
+      if (savedCongestion) {
+        const congestionData = JSON.parse(savedCongestion);
+        const boothCards = document.querySelectorAll('.booth-card');
+  
+        boothCards.forEach(card => {
+          const boothName = card.querySelector('h2').innerText;
+          if (boothName === congestionData.boothName) {
+            const congestionLevel = card.querySelector('.congestion-level');
+            congestionLevel.className = `congestion-level ${congestionData.congestion}`;
+            congestionLevel.innerText = `혼잡도: ${congestionData.congestion === 'low' ? '혼잡하지 않음' : congestionData.congestion === 'medium' ? '보통' : '혼잡'}`;
+          }
+        });
+      }
+    });
   </script>
+  
 </body>
 </html>
