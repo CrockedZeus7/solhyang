@@ -71,16 +71,29 @@
   <script>
     // WebSocket 클라이언트 연결
     const socket = new WebSocket('ws://localhost:8080');
-
-    // `index.html`에서 부스 목록을 가져와 `booth-name` 드롭다운에 추가
+  
+    // 부스 이름과 혼잡도 정보를 localStorage에서 가져오기
     window.addEventListener('DOMContentLoaded', () => {
+      // localStorage에서 저장된 혼잡도 정보를 로드
+      const savedCongestion = localStorage.getItem('congestionData');
+      if (savedCongestion) {
+        const congestionData = JSON.parse(savedCongestion);
+        const boothSelect = document.getElementById('booth-name');
+        const congestionSelect = document.getElementById('congestion-level');
+  
+        // savedCongestion이 있을 경우 드롭다운 값 설정
+        boothSelect.value = congestionData.boothName;
+        congestionSelect.value = congestionData.congestion;
+      }
+  
+      // `index.html`에서 부스 목록을 가져와 `booth-name` 드롭다운에 추가
       fetch('index.html')
         .then(response => response.text())
         .then(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
           const boothCards = doc.querySelectorAll('.booth-card');
-
+  
           const boothSelect = document.getElementById('booth-name');
           boothCards.forEach(card => {
             const boothName = card.querySelector('h2').innerText;
@@ -91,15 +104,20 @@
           });
         });
     });
-
+  
     // 혼잡도 업데이트 함수
     function updateCongestion() {
       const boothName = document.getElementById('booth-name').value;
       const congestion = document.getElementById('congestion-level').value;
-
+  
       // WebSocket을 통해 `index.html`로 데이터 전송
       socket.send(JSON.stringify({ boothName, congestion }));
+  
+      // localStorage에 혼잡도 저장
+      const congestionData = { boothName, congestion };
+      localStorage.setItem('congestionData', JSON.stringify(congestionData));
     }
   </script>
+  
 </body>
 </html>
