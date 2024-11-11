@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부스 혼잡도 업데이트</title>
+  <style>
+    /* 스타일 생략 */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>부스 혼잡도 업데이트</h1>
+    <div class="booth">
+      <label for="booth-name">부스 이름</label>
+      <select id="booth-name">
+        <!-- JavaScript에서 부스 목록을 로드할 예정 -->
+      </select>
+      <label for="congestion-level">혼잡도</label>
+      <select id="congestion-level">
+        <option value="low">혼잡하지 않음</option>
+        <option value="medium">보통</option>
+        <option value="high">혼잡</option>
+      </select>
+      <button onclick="updateCongestion()">업데이트</button>
+    </div>
+  </div>
+
+  <script>
+    // WebSocket 클라이언트 연결
+    const socket = new WebSocket('ws://localhost:8080');
+
+    // `index.html`에서 부스 목록을 가져와 `booth-name` 드롭다운에 추가
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('index.html')
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const boothCards = doc.querySelectorAll('.booth-card');
+
+          const boothSelect = document.getElementById('booth-name');
+          boothCards.forEach(card => {
+            const boothName = card.querySelector('h2').innerText;
+            const option = document.createElement('option');
+            option.value = boothName;
+            option.textContent = boothName;
+            boothSelect.appendChild(option);
+          });
+        });
+    });
+
+    // 혼잡도 업데이트 함수
+    function updateCongestion() {
+      const boothName = document.getElementById('booth-name').value;
+      const congestion = document.getElementById('congestion-level').value;
+
+      // WebSocket을 통해 `index.html`로 데이터 전송
+      socket.send(JSON.stringify({ boothName, congestion }));
+    }
+  </script>
+</body>
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f1f1f1;
+  }
+  .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+      text-align: center;
+  }
+  .booth {
+      margin-bottom: 20px;
+  }
+  .booth label {
+      display: block;
+      margin-bottom: 5px;
+  }
+  .booth input, .booth select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+  .booth button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  .booth button:hover {
+      background-color: #218838;
+  }
+</style>
+</html>
