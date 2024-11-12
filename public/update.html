@@ -89,53 +89,44 @@
         <option value="medium">보통</option>
         <option value="high">혼잡</option>
       </select>
-      <button onclick="updateCongestion()">업데이트</button>
+      <button onclick="updateCongestion()">혼잡도 업데이트</button>
     </div>
   </div>
 
   <script>
+    // WebSocket 클라이언트 연결
     const socket = new WebSocket('wss://usual-eugenia-bokdolyee-461d2b1d.koyeb.app/');
 
-    window.addEventListener('DOMContentLoaded', () => {
-      fetch('index.html')
-        .then(response => response.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const boothCards = doc.querySelectorAll('.booth-card');
-
-          const boothSelect = document.getElementById('booth-name');
-          boothCards.forEach(card => {
-            const boothName = card.querySelector('h2').innerText;
-            const option = document.createElement('option');
-            option.value = boothName;
-            option.textContent = boothName;
-            boothSelect.appendChild(option);
-          });
-        });
+    // 부스 목록 로드
+    const boothNames = ["부스1", "부스2", "부스3", "부스4"];
+    const boothNameSelect = document.getElementById("booth-name");
+    boothNames.forEach(name => {
+      const option = document.createElement("option");
+      option.value = name;
+      option.textContent = name;
+      boothNameSelect.appendChild(option);
     });
 
+    // 혼잡도 업데이트 함수
     function updateCongestion() {
-      const boothName = document.getElementById('booth-name').value;
-      const congestion = document.getElementById('congestion-level').value;
-      socket.send(JSON.stringify({ boothName, congestion }));
-      showUpdateAlert();
-    }
+      const boothName = document.getElementById("booth-name").value;
+      const congestionLevel = document.getElementById("congestion-level").value;
 
-    function showUpdateAlert() {
-      const alertBox = document.createElement('div');
-      alertBox.className = 'update-alert';
-      alertBox.textContent = '혼잡도 업데이트 완료!';
-      document.body.appendChild(alertBox);
+      // WebSocket을 통해 서버로 혼잡도 업데이트 메시지 전송
+      const message = JSON.stringify({ boothName, congestion: congestionLevel });
+      socket.send(message);
+
+      // 혼잡도 업데이트 알람 표시
+      const alertDiv = document.createElement("div");
+      alertDiv.classList.add("update-alert");
+      alertDiv.textContent = "혼잡도가 성공적으로 업데이트되었습니다!";
+      document.body.appendChild(alertDiv);
+      
+      // 3초 후에 알람 제거
       setTimeout(() => {
-        alertBox.remove();
+        document.body.removeChild(alertDiv);
       }, 3000);
     }
-
-    socket.addEventListener('close', () => {
-      alert('서버와 연결이 끊겼습니다. 페이지를 새로 고침합니다.');
-      location.reload();
-    });
   </script>
 </body>
 </html>
