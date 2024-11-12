@@ -9,6 +9,7 @@
   <script src="script.js"></script>
 </head>
 <body>
+  <!-- 부스 HTML 구조는 동일 -->
   <nav>
     <a href="index.html" class="nav-item">
       <i class="fas fa-home nav-icon"></i>홈
@@ -29,30 +30,7 @@
         <p style="font-size:12px">과학동아리</p>
       </div>
     </div>
-  </div>
- <div class="container">
-    <div class="booth-card" data-floor="3층" data-type="재미">
-      <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
-      <div class="location">2학년 2반</div>
-      <div class="congestion-level none">정보 없음</div>
-      <h2>부스2</h2>
-      <p>이 부스에서는 여러분이 원하는 SF 영화를 시청할 수 있습니다.<br>관련 영상 시청 후 보고서를 작성할 수 있습니다. </p>
-      <div class="dong">
-        <p style="font-size:12px">영화동아리</p>
-      </div>
-    </div>
-  </div>
- <div class="container">
-    <div class="booth-card" data-floor="2층" data-type="재미">
-      <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
-      <div class="location">3학년 1반</div>
-      <div class="congestion-level none">정보 없음</div>
-      <h2>테코</h2>
-      <p>이 부스에서는 여러분이 원하는 SF 영화를 시청할 수 있습니다.<br>관련 영상 시청 후 보고서를 작성할 수 있습니다. </p>
-      <div class="dong">
-        <p style="font-size:12px">테코동아리</p>
-      </div>
-    </div>
+    <!-- 추가적인 부스 카드들 -->
   </div>
 
   <footer>
@@ -66,6 +44,7 @@
     // 서버에서 혼잡도 업데이트 메시지를 받을 때마다 해당 부스의 혼잡도 업데이트
     socket.addEventListener('message', function (event) {
       const data = JSON.parse(event.data);
+      console.log("수신한 데이터:", data); // 데이터를 콘솔에 출력
 
       // 전체 부스 상태 업데이트 시
       if (typeof data === 'object' && !Array.isArray(data)) {
