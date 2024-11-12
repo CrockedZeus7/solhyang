@@ -8,8 +8,8 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
-// WebSocket을 통해 마지막 메시지를 저장할 변수
-let lastMessage = null;
+// 각 부스의 혼잡도 상태를 저장할 객체
+const boothCongestions = {};
 
 // 정적 파일 제공
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,23 +18,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 wss.on('connection', (ws) => {
     console.log('클라이언트 연결됨.');
 
-    // 새 클라이언트가 연결되면 마지막 메시지를 전송
-    if (lastMessage) {
-        ws.send(JSON.stringify(lastMessage));
-    }
+    // 새 클라이언트가 연결되면 현재 모든 부스의 혼잡도 정보를 전송
+    ws.send(JSON.stringify(boothCongestions));
 
     // 메시지 수신 처리
     ws.on('message', (message) => {
         const data = JSON.parse(message);
         console.log(`수신된 메시지: ${message}`);
         
-        // 수신된 메시지를 lastMessage에 저장
-        lastMessage = data;
+        // 부스 이름에 따라 혼잡도 저장
+        boothCongestions[data.boothName] = data.congestion;
 
-        // 모든 클라이언트에 메시지 브로드캐스트
+        // 모든 클라이언트에 각 부스의 혼잡도 정보를 브로드캐스트
         wss.clients.forEach((client) => {
             if (client.readyState === WebSocket.OPEN) {
-                client.send(JSON.stringify(data));
+                client.send(JSON.stringify({
+                    boothName: data.boothName,
+                    congestion: data.congestion
+                }));
             }
         });
     });
