@@ -9,7 +9,6 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <!-- 부스 HTML 구조는 동일 -->
   <nav>
     <a href="index.html" class="nav-item">
       <i class="fas fa-home nav-icon"></i>홈
@@ -18,9 +17,24 @@
       <i class="fas fa-map-marker-alt nav-icon"></i>부스 지도
     </a>
   </nav>
-  
+  <div class="category-filter">
+    <label for="floor-category">층 선택:</label>
+    <select id="floor-category" onchange="filterBooths()">
+      <option value="all">전체</option>
+      <option value="1층">1층</option>
+      <option value="2층">2층</option>
+      <option value="3층">3층</option>
+    </select>
+    <p>&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+    <label for="type-category">종류 선택:</label>
+    <select id="type-category" onchange="filterBooths()">
+      <option value="all">전체</option>
+      <option value="재미">재미</option>
+      <option value="교육">교육</option>
+    </select>
+  </div>
   <div class="container">
-    <div class="booth-card" data-floor="1층" data-type="재미">
+    <div class="booth-card" data-floor="1층" data-type="재미" data-booth-name="부스1">
       <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
       <div class="location">1학년 1반</div>
       <div class="congestion-level none">정보 없음</div>
@@ -30,46 +44,56 @@
         <p style="font-size:12px">과학동아리</p>
       </div>
     </div>
-    <!-- 추가적인 부스 카드들 -->
-  </div>
 
+    <div class="booth-card" data-floor="2층" data-type="교육" data-booth-name="부스2">
+      <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
+      <div class="location">2학년 2반</div>
+      <div class="congestion-level none">정보 없음</div>
+      <h2>부스2</h2>
+      <p>이 부스에서는 원하는 이에게 편지를 전달할 수 있도록 우편함을 운영합니다 <br> 우편함을 통해 우편은 12월까지 전달되며, 추첨을 통해 3명은 상품권이 지급됩니다.</p>
+      <p style="font-size:12px">심리치료동아리</p>
+    </div>
+
+    <div class="booth-card" data-floor="3층" data-type="재미" data-booth-name="부스3">
+      <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
+      <div class="location">3학년 3반</div>
+      <div class="congestion-level none">정보 없음</div>
+      <h2>부스3</h2>
+      <p>부스 설명 3</p>
+      <p style="font-size:12px">동아리3</p>
+    </div>
+    
+    <div class="booth-card" data-floor="3층" data-type="재미" data-booth-name="부스4">
+      <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
+      <div class="location">3학년 4반</div>
+      <div class="congestion-level none">정보 없음</div>
+      <h2>부스4</h2>
+      <p>부스 설명 4</p>
+      <p style="font-size:12px">동아리4</p>
+    </div>
+  </div>
+  <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px; font-size: 1.1rem; color: #555;">
+    찾으시는 결과가 없습니다.
+  </div>
   <footer>
     경인고등학교 진로탐색 프로젝트 복돌이팀 제작 | 2024
   </footer>
-
   <script>
-    // WebSocket 클라이언트 연결
     const socket = new WebSocket('wss://usual-eugenia-bokdolyee-461d2b1d.koyeb.app/');
 
-    // 서버에서 혼잡도 업데이트 메시지를 받을 때마다 해당 부스의 혼잡도 업데이트
     socket.addEventListener('message', function (event) {
       const data = JSON.parse(event.data);
-      console.log("수신한 데이터:", data); // 데이터를 콘솔에 출력
-
-      // 전체 부스 상태 업데이트 시
-      if (typeof data === 'object' && !Array.isArray(data)) {
-        Object.keys(data).forEach(boothName => {
-          updateBoothCongestion(boothName, data[boothName]);
-        });
-      } else {
-        // 개별 부스 업데이트 시
-        updateBoothCongestion(data.boothName, data.congestion);
-      }
-    });
-
-    // 특정 부스의 혼잡도 업데이트 함수
-    function updateBoothCongestion(boothName, congestion) {
       const boothCards = document.querySelectorAll('.booth-card');
-
+      
       boothCards.forEach(card => {
-        const cardBoothName = card.querySelector('h2').innerText;
-        if (cardBoothName === boothName) {
+        const boothName = card.querySelector('h2').innerText;
+        if (boothName === data.boothName) {
           const congestionLevel = card.querySelector('.congestion-level');
-          congestionLevel.className = `congestion-level ${congestion}`;
-          congestionLevel.innerText = `${congestion === 'low' ? '혼잡하지 않음' : congestion === 'medium' ? '보통' : '혼잡'}`;
+          congestionLevel.className = `congestion-level ${data.congestion}`;
+          congestionLevel.innerText = `${data.congestion === 'low' ? '혼잡하지 않음' : data.congestion === 'medium' ? '보통' : '혼잡'}`;
         }
       });
-    }
+    });
   </script>
 </body>
 </html>
