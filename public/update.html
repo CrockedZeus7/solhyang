@@ -25,7 +25,63 @@
       <button onclick="updateCongestion()">업데이트</button>
     </div>
   </div>
+<script>
+  // 혼잡도 업데이트 후 알람 표시 함수
+  function showUpdateAlert() {
+    const alertBox = document.createElement('div');
+    alertBox.className = 'update-alert';
+    alertBox.textContent = '혼잡도 업데이트 완료!';
+    document.body.appendChild(alertBox);
 
+    // 3초 후에 알람이 사라지도록 설정
+    setTimeout(() => {
+      alertBox.remove();
+    }, 3000);
+  }
+
+  // 혼잡도 업데이트 함수
+  function updateCongestion() {
+    const boothName = document.getElementById('booth-name').value;
+    const congestion = document.getElementById('congestion-level').value;
+
+    // WebSocket을 통해 데이터 전송
+    socket.send(JSON.stringify({ boothName, congestion }));
+    
+    // 알람 표시
+    showUpdateAlert();
+  }
+
+  // 서버와 연결이 끊겼을 때 이벤트 처리
+  socket.addEventListener('close', () => {
+    alert('서버와 연결이 끊겼습니다. 페이지를 새로 고침합니다.');
+    location.reload();
+  });
+</script>
+<style>
+  /* 혼잡도 업데이트 알람 스타일 */
+  .update-alert {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      z-index: 1000;
+      animation: fadeInOut 3s ease;
+  }
+
+  /* 알람 애니메이션 */
+  @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(-10px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-10px); }
+  }
+</style>
   <script>
     // WebSocket 클라이언트 연결
     const socket = new WebSocket('wss://usual-eugenia-bokdolyee-461d2b1d.koyeb.app/');
