@@ -29,8 +29,8 @@
   <script>
     // WebSocket 클라이언트 연결
     const socket = new WebSocket('wss://usual-eugenia-bokdolyee-461d2b1d.koyeb.app/');
-
-    // `index.html`에서 부스 목록을 가져와 `booth-name` 드롭다운에 추가
+  
+    // index.html에서 부스 목록을 가져와 booth-name 드롭다운에 추가
     window.addEventListener('DOMContentLoaded', () => {
       fetch('index.html')
         .then(response => response.text())
@@ -38,7 +38,7 @@
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
           const boothCards = doc.querySelectorAll('.booth-card');
-
+  
           const boothSelect = document.getElementById('booth-name');
           boothCards.forEach(card => {
             const boothName = card.querySelector('h2').innerText;
@@ -49,16 +49,17 @@
           });
         });
     });
-
+  
     // 혼잡도 업데이트 함수
     function updateCongestion() {
       const boothName = document.getElementById('booth-name').value;
       const congestion = document.getElementById('congestion-level').value;
-
-      // WebSocket을 통해 `index.html`로 데이터 전송
+  
+      // WebSocket을 통해 데이터 전송
       socket.send(JSON.stringify({ boothName, congestion }));
     }
   </script>
+  
 </body>
 <style>
   body {
