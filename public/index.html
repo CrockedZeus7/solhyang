@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>솔향제 부스 정보</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="script.js"></script>
 </head>
 <body>
@@ -34,7 +34,7 @@
     </select>
   </div>
   <div class="container">
-    <div class="booth-card" data-floor="1층" data-type="재미" data-booth="부스1">
+    <div class="booth-card" data-floor="1층" data-type="재미">
       <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
       <div class="location">1학년 1반</div>
       <div class="congestion-level none">정보 없음</div>
@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <div class="booth-card" data-floor="2층" data-type="교육" data-booth="부스2">
+    <div class="booth-card" data-floor="2층" data-type="교육">
       <img src="http://via.placeholder.com/470x313" alt="=부스 이미지">
       <div class="location">2학년 2반</div>
       <div class="congestion-level none">정보 없음</div>
@@ -54,7 +54,7 @@
         <p style="font-size:12px">심리치료동아리</p>
     </div>
 
-    <div class="booth-card" data-floor="3층" data-type="재미" data-booth="부스3">
+    <div class="booth-card" data-floor="3층" data-type="재미">
       <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
       <div class="location">3학년 3반</div>
       <div class="congestion-level none">정보 없음</div>
@@ -63,7 +63,7 @@
       <p style="font-size:12px">동아리3</p>
       </div>
       
-    <div class="booth-card" data-floor="3층" data-type="재미" data-booth="부스4">
+    <div class="booth-card" data-floor="3층" data-type="재미">
       <img src="http://via.placeholder.com/470x313" alt="부스 이미지">
       <div class="location">3학년 4반</div>
       <div class="congestion-level none">정보 없음</div>
@@ -78,6 +78,7 @@
   <footer>
     경인고등학교 진로탐색 프로젝트 복돌이팀 제작 | 2024
   </footer>
+</body>
   <script>
     // WebSocket 클라이언트 연결
     const socket = new WebSocket('wss://usual-eugenia-bokdolyee-461d2b1d.koyeb.app/');
@@ -88,15 +89,14 @@
       const boothCards = document.querySelectorAll('.booth-card');
   
       boothCards.forEach(card => {
-        const boothName = card.getAttribute('data-booth');
+        const boothName = card.querySelector('h2').innerText;
         if (boothName === data.boothName) {
           const congestionLevel = card.querySelector('.congestion-level');
-          congestionLevel.className = `congestion-level ${data.congestion}`;
-          congestionLevel.innerText = `${data.congestion === 'low' ? '혼잡하지 않음' : data.congestion === 'medium' ? '보통' : '혼잡'}`;
+          congestionLevel.className = congestion-level ${data.congestion};
+          congestionLevel.innerText = ${data.congestion === 'low' ? '혼잡하지 않음' : data.congestion === 'medium' ? '보통' : '혼잡'};
         }
       });
     });
   </script>
   
-</body>
 </html>
