@@ -79,24 +79,37 @@
     경인고등학교 진로탐색 프로젝트 복돌이팀 제작 | 2024
   </footer>
 </body>
-  <script>
+<script>
     // WebSocket 클라이언트 연결
     const socket = new WebSocket('wss://usual-eugenia-bokdolyee-461d2b1d.koyeb.app/');
   
     // 서버에서 혼잡도 업데이트 메시지를 받을 때마다 해당 부스의 혼잡도 업데이트
     socket.addEventListener('message', function (event) {
-      const data = JSON.parse(event.data);
-      const boothCards = document.querySelectorAll('.booth-card');
-  
-      boothCards.forEach(card => {
-        const boothName = card.querySelector('h2').innerText;
-        if (boothName === data.boothName) {
-          const congestionLevel = card.querySelector('.congestion-level');
-          congestionLevel.className = `congestion-level ${data.congestion}`;
-          congestionLevel.innerText = `${data.congestion === 'low' ? '혼잡하지 않음' : data.congestion === 'medium' ? '보통' : '혼잡'}`;
+        const data = JSON.parse(event.data);
+      
+        // 여러 부스 혼잡도 정보를 업데이트하기 위한 처리
+        if (typeof data === 'object' && !Array.isArray(data)) {
+            Object.keys(data).forEach(boothName => {
+                updateBoothCongestion(boothName, data[boothName]);
+            });
+        } else {
+            updateBoothCongestion(data.boothName, data.congestion);
         }
-      });
     });
-  </script>
+
+    // 특정 부스의 혼잡도 업데이트 함수
+    function updateBoothCongestion(boothName, congestion) {
+        const boothCards = document.querySelectorAll('.booth-card');
+  
+        boothCards.forEach(card => {
+            const cardBoothName = card.querySelector('h2').innerText;
+            if (cardBoothName === boothName) {
+                const congestionLevel = card.querySelector('.congestion-level');
+                congestionLevel.className = `congestion-level ${congestion}`;
+                congestionLevel.innerText = `${congestion === 'low' ? '혼잡하지 않음' : congestion === 'medium' ? '보통' : '혼잡'}`;
+            }
+        });
+    }
+</script>>
   
 </html>
