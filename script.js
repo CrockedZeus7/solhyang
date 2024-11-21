@@ -16,6 +16,6 @@ function filterBooths() {
     }
   });
 
-  // 결과 없음 메시지 표시/숨기기
+  // 결과 없음 메세지 보여주는 코드임
   document.getElementById('no-results-message').style.display = anyVisible ? 'none' : 'block';
 }
