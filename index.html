@@ -48,7 +48,7 @@
     <div class="booth-card" data-floor="2층" data-type="교육">
       <img src="http://via.placeholder.com/470x313" alt="=부스 이미지">
       <div class="location">2학년 2반</div>
-      <div class="congestion-level low">혼잡하지 않음</div>
+      <div class="congestion-level low">여유</div>
       <h2>부스2</h2>
       <p>이 부스에서는 원하는 이에게 편지를 전달할 수 있도록 우편함을 운영합니다 <br> 우편함을 통해 우편은 12월까지 전달되며, 추첨을 통해 3명은 상품권이 지급됩니다.</p>
         <p style="font-size:12px">심리치료동아리</p>
@@ -93,7 +93,7 @@
         if (boothName === data.boothName) {
           const congestionLevel = card.querySelector('.congestion-level');
           congestionLevel.className = congestion-level ${data.congestion};
-          congestionLevel.innerText = ${data.congestion === 'low' ? '혼잡하지 않음' : data.congestion === 'medium' ? '보통' : '혼잡'};
+          congestionLevel.innerText = ${data.congestion === 'low' ? '여유' : data.congestion === 'medium' ? '보통' : '혼잡'};
         }
       });
     });
