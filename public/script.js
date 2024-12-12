@@ -95,6 +95,10 @@ socket.onmessage = (event) => {
   }
 };
 
+// WebSocket 연결 종료 시 알림 표시
+socket.onclose = () => {
+  alert("이런.. 서버와의 연결이 끊겼어요. 새로고침을 하여 다시 시도해주세요!");
+};
 // 부스 혼잡도 업데이트 함수
 function updateBoothCongestion(boothName, congestion) {
   const card = Array.from(boothContainer.children).find(
