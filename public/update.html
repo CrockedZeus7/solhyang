@@ -50,7 +50,7 @@
             boothSelect.appendChild(option);
           });
         })
-        .catch(error => console.error('부스 데이터를 불러오는 데 실패했습니다:', error));
+        .catch(error => console.error('부스 데이터를 불러오는 데 실패했어요. 새로고침을하여 다시 시도해주세요.:', error));
     });
 
     function updateCongestion() {
@@ -65,9 +65,9 @@
           status: congestion,
         }));
 
-        alert(`${boothName}의 혼잡도가 ${getCongestionText(congestion)}로 업데이트되었습니다.`);
+        alert(`${boothName}의 혼잡도가 ${getCongestionText(congestion)}로 업데이트됨`);
       } else {
-        alert('WebSocket 연결이 열려있지 않습니다. 서버를 확인해주세요.');
+        alert('WebSocket 연결이 끊겼어요, 새로고침을 해서 다시 연결해주세요.');
       }
     }
   </script>
