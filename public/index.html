@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>솔향제 부스 정보</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-item">
+      <i class="fas fa-home nav-icon"></i>홈
+    </a>
+    <a href="map.html" class="nav-item">
+      <i class="fas fa-map-marker-alt nav-icon"></i>부스 지도
+    </a>
+  </nav>
+
+  <div class="category-filter">
+    <label for="floor-category">층 선택:</label>
+    <select id="floor-category" onchange="filterBooths()">
+      <option value="all">전체</option>
+      <option value="1층">1층</option>
+      <option value="2층">2층</option>
+      <option value="3층">3층</option>
+    </select>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <label for="type-category">종류 선택:</label>
+    <select id="type-category" onchange="filterBooths()">
+      <option value="all">전체</option>
+      <option value="재미">재미</option>
+      <option value="교육">교육</option>
+    </select>
+  </div>
+
+  <div class="container" id="booth-container">
+    <!-- JavaScript를 통해 동적으로 부스 카드 추가 -->
+  </div>
+  <div id="image-slider" style="display: none;">
+    <button class="close-slider" onclick="closeSlider()">X</button>
+    <div class="slider-content">
+      <img id="slider-image" src="" alt="슬라이더 이미지">
+      <button class="prev" onclick="prevImage()">&#10094;</button>
+      <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
+  </div>
+  
+
+  <div id="no-results-message" style="display: none; text-align: center; margin-top: 20px; font-size: 1.1rem; color: #555;">
+    찾으시는 결과가 없습니다.
+  </div>
+
+  <footer>
+    경인고등학교 진로탐색 프로젝트 BOKDOL팀 제작 | 2024
+  </footer>
+</body>
+</html>

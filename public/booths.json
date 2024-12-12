@@ -1,0 +1,28 @@
+[
+  {
+    "name": "부스1",
+    "floor": "1층",
+    "type": "재미",
+    "location": "1학년 1반",
+    "congestion": "high",
+    "description": "이 부스에서는 여러분이 원하는 SF 영화를 시청할 수 있습니다.",
+    "dong": "과학동아리",
+    "images": [
+      "http://via.placeholder.com/470x223",
+      "http://via.placeholder.com/470x313"
+    ]
+  },
+  {
+    "name": "부스2",
+    "floor": "2층",
+    "type": "재미",
+    "location": "2학년 3반",
+    "congestion": "low",
+    "description": "이 부스에서는 여러분이 원하는 SF 영화를 시청할 수 있습니다.",
+    "dong": "과학동아리",
+    "images": [
+      "http://via.placeholder.com/470x223",
+      "http://via.placeholder.com/470x313"
+    ]
+  }
+]
