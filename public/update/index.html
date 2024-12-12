@@ -40,7 +40,7 @@
 
     // index.html에서 부스 목록을 가져와 booth-name 드롭다운에 추가
     window.addEventListener('DOMContentLoaded', () => {
-      fetch('booths.json')
+      fetch('../booths.json')
         .then(response => response.json())
         .then(booths => {
           const boothSelect = document.getElementById('booth-name');
