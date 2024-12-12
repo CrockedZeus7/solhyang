@@ -7,7 +7,7 @@
     "location": "위클래스",
     "congestion": "none",
     "description": "귀신의 집입니다",
-    "dong": "BLISS(또래상담부)",
+    "dong": "BLISS<br>(또래상담부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -20,7 +20,7 @@
     "location": "소담도서관",
     "congestion": "none",
     "description": "해리포터 관련 활동입니다",
-    "dong": "책다솜(도서부)",
+    "dong": "책다솜<br>(도서부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -33,7 +33,7 @@
     "location": "공용 1실",
     "congestion": "none",
     "description": "부스3 설명",
-    "dong": "BEAT(교육관련진로탐색부)",
+    "dong": "BEAT<br>(교육관련진로탐색부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -46,7 +46,7 @@
     "location": "2-13 교실",
     "congestion": "none",
     "description": "부스4 설명",
-    "dong": "프로Free Law(법관련탐색부)",
+    "dong": "프로Free Law<br>(법관련탐색부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -98,7 +98,7 @@
     "location": "생명과학실",
     "congestion": "none",
     "description": "해리포터 관련 활동입니다",
-    "dong": "크로모솜(생명과학부)",
+    "dong": "크로모솜<br>(생명과학부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -111,7 +111,7 @@
     "location": "영어1실",
     "congestion": "none",
     "description": "해리포터 관련 활동입니다",
-    "dong": "이토피아(영어권문화부)",
+    "dong": "이토피아<br>(영어권문화부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -176,7 +176,7 @@
     "location": "공용6실",
     "congestion": "none",
     "description": "귀신의 집입니다",
-    "dong": "MES(수학주제탐구부)",
+    "dong": "MES<br>(수학주제탐구부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -202,7 +202,7 @@
     "location": "지구과학실",
     "congestion": "none",
     "description": "부스3 설명",
-    "dong": "시냅스(물리, 화학, 생물융합부)",
+    "dong": "시냅스<br>(물리, 화학, 생물융합부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -215,7 +215,7 @@
     "location": "공용3실",
     "congestion": "none",
     "description": "부스4 설명",
-    "dong": "IDEEMIA(심리철학부)",
+    "dong": "IDEEMIA<br>(심리철학부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -228,7 +228,7 @@
     "location": "가정실",
     "congestion": "none",
     "description": "부스5 설명",
-    "dong": "폴리부(경찰사법부)",
+    "dong": "폴리부<br>(경찰사법부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -267,7 +267,7 @@
     "location": "도담도담 학습카페",
     "congestion": "none",
     "description": "부스3 설명",
-    "dong": "KPES(체육지원부)",
+    "dong": "KPES<br>(체육지원부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
@@ -306,7 +306,7 @@
     "location": "소공용실2",
     "congestion": "none",
     "description": "부스4 설명",
-    "dong": "진로보석십자수/컬러링반",
+    "dong": "진로보석십자수<br>컬러링반",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
