@@ -4,24 +4,58 @@
     "floor": "1층",
     "type": "재미",
     "location": "1학년 1반",
-    "congestion": "high",
-    "description": "이 부스에서는 여러분이 원하는 SF 영화를 시청할 수 있습니다.",
-    "dong": "과학동아리",
+    "congestion": "none",
+    "description": "부스1 설명",
+    "dong": "부스1 동아리",
     "images": [
-      "http://via.placeholder.com/470x223",
       "http://via.placeholder.com/470x313"
     ]
   },
   {
     "name": "부스2",
+    "floor": "1층",
+    "type": "교육",
+    "location": "1학년 4반",
+    "congestion": "none",
+    "description": "부스2 설명",
+    "dong": "부스2 동아리",
+    "images": [
+      "http://via.placeholder.com/470x313"
+    ]
+  },
+  {
+    "name": "부스3",
     "floor": "2층",
     "type": "재미",
-    "location": "2학년 3반",
-    "congestion": "low",
-    "description": "이 부스에서는 여러분이 원하는 SF 영화를 시청할 수 있습니다.",
-    "dong": "과학동아리",
+    "location": "2학년 1반",
+    "congestion": "none",
+    "description": "부스3 설명",
+    "dong": "부스3 동아리",
     "images": [
-      "http://via.placeholder.com/470x223",
+      "http://via.placeholder.com/470x313"
+    ]
+  },
+  {
+    "name": "부스4",
+    "floor": "3층",
+    "type": "교육",
+    "location": "3학년 1반",
+    "congestion": "none",
+    "description": "부스4 설명",
+    "dong": "부스4 동아리",
+    "images": [
+      "http://via.placeholder.com/470x313"
+    ]
+  },
+  {
+    "name": "부스5",
+    "floor": "3층",
+    "type": "재미",
+    "location": "3학년 3반",
+    "congestion": "none",
+    "description": "부스5 설명",
+    "dong": "부스5 동아리",
+    "images": [
       "http://via.placeholder.com/470x313"
     ]
   }
