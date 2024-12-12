@@ -14,13 +14,12 @@ function loadBooths() {
         card.className = "booth-card";
         card.dataset.floor = booth.floor;
         card.dataset.type = booth.type;
-
+          //<p>${booth.description}</p> 이 코드는 아래에서 제거한 코드임 나중에 삽입하셈
         card.innerHTML = `
           <img src="${booth.images[0]}" alt="부스 이미지" onclick="openSlider('${JSON.stringify(booth.images)}')" />
           <div class="location">${booth.location}</div>
           <div class="congestion-level ${booth.congestion}">${getCongestionText(booth.congestion)}</div>
           <h2>${booth.name}</h2>
-          <p>${booth.description}</p>
           <p style="font-size:12px">${booth.dong}</p>
         `;
 
