@@ -15,7 +15,7 @@
       </select>
       <label for="congestion-level">혼잡도</label>
       <select id="congestion-level">
-        <option value="low">혼잡하지 않음</option>
+        <option value="low">여유</option>
         <option value="medium">보통</option>
         <option value="high">혼잡</option>
       </select>
@@ -27,7 +27,7 @@
     // 부스 혼잡도 텍스트 반환 함수
     function getCongestionText(level) {
       switch (level) {
-        case "low": return "혼잡하지 않음";
+        case "low": return "여유";
         case "medium": return "보통";
         case "high": return "혼잡";
         default: return "정보 없음";
