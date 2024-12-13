@@ -1,6 +1,6 @@
 const boothContainer = document.getElementById("booth-container");
 const boothCongestionMap = {};
-const socket = new WebSocket('wss://usual-eugenia-bokdolyee-461d2b1d.koyeb.app');
+const socket = new WebSocket('wss://solhyang.xyz');
 
 // 부스 데이터 로드 함수
 function loadBooths() {
