@@ -1,6 +1,6 @@
 const boothContainer = document.getElementById("booth-container");
 const boothCongestionMap = {};
-const socket = new WebSocket('wss://solhyang.xyz');
+const socket = new WebSocket('wss://35.223.91.6:8080');
 
 // 부스 데이터 로드 함수
 function loadBooths() {
