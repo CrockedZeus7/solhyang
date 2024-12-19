@@ -26,19 +26,6 @@
     ]
   },
   {
-    "number": "10",
-    "name": "경인 노래자랑!",
-    "floor": "1층",
-    "type": "체험",
-    "location": "방송실",
-    "congestion": "none",
-    "de" : "멋진 노래 솜씨를 발휘해 경인고의 최고 보컬이 되어보세요!",
-    "dong": "KIBS(방송부)",
-    "images": [
-      "https://i.ibb.co/sVhXPSF/1734598050402.jpg"
-    ]
-  },
-  {
     "number": "3",
     "name": "크리스마스 속 마피아",
     "floor": "2층",
@@ -129,6 +116,19 @@
     "dong": "이토피아 (영어권문화부)",
     "images": [
       "https://i.ibb.co/8cNHrbt/1734593524389.jpg"
+    ]
+  },
+  {
+    "number": "10",
+    "name": "경인 노래자랑!",
+    "floor": "1층",
+    "type": "체험",
+    "location": "방송실",
+    "congestion": "none",
+    "de" : "멋진 노래 솜씨를 발휘해 경인고의 최고 보컬이 되어보세요!",
+    "dong": "KIBS(방송부)",
+    "images": [
+      "https://i.ibb.co/sVhXPSF/1734598050402.jpg"
     ]
   },
   {
