@@ -326,6 +326,7 @@
     "name": "작품 전시",
     "floor": "5층",
     "type": "감상",
+    "de":" ",
     "location": "소공용실2",
     "congestion": "none",
     "dong": "컬러링부",
