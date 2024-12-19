@@ -19,6 +19,7 @@ function loadBooths() {
           <div class="location">${booth.location}</div>
           <div class="congestion-level ${booth.congestion}">${getCongestionText(booth.congestion)}</div>
           <h2>${booth.name}</h2>
+          <p style="font-size:14px">${booth.de}</p>
           <p style="font-size:12px">${booth.dong}</p>
         `;
 
