@@ -5,10 +5,11 @@
     "floor": "4층",
     "type": "체험",
     "location": "3-5 교실",
-    "congestion": "low",
+    "congestion": "none",
+    "de":"인형 두개찾기<br>주어진 단어찾기",
     "dong": "BLISS (또래상담부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/KskSmQn/1734592264201.jpg"
     ]
   },
   {
@@ -29,7 +30,7 @@
     "floor": "1층",
     "type": "체험",
     "location": "방송실",
-    "congestion": "medium",
+    "congestion": "none",
     "de" : "<p>아래 버튼을 눌러, 노래방 예약 시간대를 신청할 수 있습니다</p><button style=\"background-color: #353535; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;\" onmouseover=\"this.style.backgroundColor='#353535'\" onmouseout=\"this.style.backgroundColor='#292929'\" onclick=\"window.location.href='http://redict.sungeun1620.kro.kr';\">노래 신청</button>",
     "dong": "KIBS(방송부)",
     "images": [
@@ -221,7 +222,7 @@
     "dong": "IDEEMIA (심리철학부)",
     "de": "1.타로 체험<br> 당신의 다양한 운세를 확인해보세요!<br> 2. 익명 손편지 전달<br>익명의 상대에게 자신의 마음을 전달하세요!<br><1부 당 한정 수량 45개!!>",
     "images": [
-     "https://i.ibb.co/L9xcxZ1/1734586752709.jpg"
+     "https://i.ibb.co/vB7W7GW/1734592409154.jpg"
     ]
   },
   {
@@ -300,6 +301,7 @@
     "type": "제작",
     "location": "물리실",
     "congestion": "none",
+    "de":"스노우볼, 마이크 둘 중 하나 만들고 간단한 문제를 풀어 간식 뽑기하자"
     "dong": "물리부",
     "images": [
       "http://via.placeholder.com/470x313"
