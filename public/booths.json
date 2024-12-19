@@ -30,7 +30,7 @@
     "type": "체험",
     "location": "방송실",
     "congestion": "medium",
-    "dong": "<p>아래 버튼을 눌러, 노래방 예약 시간대를 신청할 수 있습니다</p><button style=\"background-color: #353535; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;\" onmouseover=\"this.style.backgroundColor='#353535'\" onmouseout=\"this.style.backgroundColor='#292929'\" onclick=\"window.location.href='redict.sungeun1620.kro.kr';\">노래 신청</button><br><br>KIBS(방송부)",
+    "dong": "<p>아래 버튼을 눌러, 노래방 예약 시간대를 신청할 수 있습니다</p><button style=\"background-color: #353535; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;\" onmouseover=\"this.style.backgroundColor='#353535'\" onmouseout=\"this.style.backgroundColor='#292929'\" onclick=\"window.location.href='http://redict.sungeun1620.kro.kr';\">노래 신청</button><br><br>KIBS(방송부)",
     "images": [
       "http://via.placeholder.com/470x313"
     ]
