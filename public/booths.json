@@ -261,6 +261,7 @@
       "게임"
     ],
     "location": "공용5실",
+    "de":"페이스페인팅, 뷰티 퀴즈, 여장체험",
     "congestion": "none",
     "dong": "뷰티부",
     "images": [
@@ -274,6 +275,7 @@
     "type": "게임",
     "location": "3-11 교실",
     "congestion": "none",
+    "de":"경제경영부가 말아주는 도박!",
     "dong": "경제경영부",
     "images": [
       "https://i.ibb.co/phpP0Kk/1734589221356.jpg"
@@ -326,7 +328,7 @@
     "name": "작품 전시",
     "floor": "5층",
     "type": "감상",
-    "de":"<br><br><br>",
+    "de":" ",
     "location": "소공용실2",
     "congestion": "none",
     "dong": "컬러링반",
