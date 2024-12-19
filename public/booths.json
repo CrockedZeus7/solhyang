@@ -323,6 +323,7 @@
     "type": "감상",
     "location": "시청각실",
     "congestion": "none",
+    "de": "1. 짧은 영화를 보고 소감 작성하기<br>2. 폴라로이드 사진으로 추억 남기기",
     "dong": "영화제작반",
     "images": [
       "http://via.placeholder.com/470x313"
