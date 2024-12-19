@@ -119,9 +119,10 @@
     "type": "게임",
     "location": "영어1실",
     "congestion": "none",
+    "de":"영영풀이를 듣고 단어를 추론하라!<br>많이 맞출수록 좋은 간식이?",
     "dong": "이토피아 (영어권문화부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/8cNHrbt/1734593524389.jpg"
     ]
   },
   {
@@ -304,7 +305,7 @@
     "de":"스노우볼, 마이크 둘 중 하나 만들고 간단한 문제를 풀어 간식 뽑기하자",
     "dong": "물리부",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/fqy1ND2/1734591905757.jpg"
     ]
   },
   {
