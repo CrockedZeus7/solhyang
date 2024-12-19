@@ -198,7 +198,7 @@
     "congestion": "none",
     "dong": "화학탐구부",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/kXWc3Tn/1734591903195.jpg"
     ]
   },
   {
@@ -208,9 +208,10 @@
     "type": "제작",
     "location": "지구과학실",
     "congestion": "none",
+    "de":"재밌는 실험하고 간식 받아가기",
     "dong": "시냅스 (물리, 화학, 생물융합부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "재밌는 실험하고 간식 받아가기"
     ]
   },
   {
