@@ -149,17 +149,18 @@
   },
   {
     "number": "11",
-    "name": "방탈출(T)",
+    "name": "교실탈출",
     "floor": "4층",
     "type": [
       "체험",
       "게임"
     ],
+    "de":"미션을 풀고 교실을 탈출하라 (상품 증정)"
     "location": "2-7 교실",
     "congestion": "none",
     "dong": "마을탐방부",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/vVCKP4s/1734614601376.jpg"
     ]
   },
   {
