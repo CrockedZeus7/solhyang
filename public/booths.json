@@ -6,7 +6,7 @@
     "type": "체험",
     "location": "3-5 교실",
     "congestion": "none",
-    "de":"인형 두개찾기<br>주어진 단어찾기",
+    "de":"인형 두개찾기<br>숫자찾기",
     "dong": "BLISS (또래상담부)",
     "images": [
       "https://i.ibb.co/KskSmQn/1734592264201.jpg"
@@ -26,15 +26,15 @@
   },
   {
     "number": "10",
-    "name": "노래방",
+    "name": "경인 노래자랑!",
     "floor": "1층",
     "type": "체험",
     "location": "방송실",
     "congestion": "none",
-    "de" : "<p>아래 버튼을 눌러, 노래방 예약 시간대를 신청할 수 있습니다</p><button style=\"background-color: #353535; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;\" onmouseover=\"this.style.backgroundColor='#353535'\" onmouseout=\"this.style.backgroundColor='#292929'\" onclick=\"window.location.href='http://redict.sungeun1620.kro.kr';\">노래 신청</button>",
+    "de" : "멋진 노래 솜씨를 발휘해 경인고의 최고 보컬이 되어보세요!",
     "dong": "KIBS(방송부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/sVhXPSF/1734598050402.jpg"
     ]
   },
   {
@@ -44,26 +44,29 @@
     "type": "게임",
     "location": "공용 1실",
     "congestion": "none",
+    "de":"시민들 속 거짓말하는 사람을 찾고 상품 받아가세요",
     "dong": "BEAT (교육관련진로탐색부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/brdJTbs/1734598823176.jpg"
     ]
   },
   {
     "number": "4",
-    "name": "룰렛상품추천, 포토부스",
+    "name": "경인킹덤",
     "floor": "4층",
     "type": "체험",
     "location": "2-13 교실",
     "congestion": "none",
+    "de":"미니게임을 통한 상품,<br> 포토부스",
     "dong": "프로Free Law (법관련탐색부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/gF2yP0b/1734598419939.jpg"
     ]
   },
   {
     "number": "5",
-    "name": "풍선 다트, 모루인형 제작",
+    "name": "사나래의 크리스마스 파티",
+    "de":"풍선다트로 크리스마스 선물을 받아가세요!",
     "floor": "5층",
     "type": "제작",
     "location": "기술실",
@@ -75,7 +78,7 @@
   },
   {
     "number": "6",
-    "name": "모루인형 제작, 페이스페인팅, 보석찾고 간식받기",
+    "name": "어서와요 보석의 숲",
     "floor": "2층",
     "type": [
       "제작",
@@ -83,21 +86,23 @@
     ],
     "location": "미술1실",
     "congestion": "none",
+    "de":"페이스페인팅,<br>모루인형 만들기,<br>복불복 간식이벤트",
     "dong": "팔레트(미술부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/mHM37mv/1734598417042.jpg"
     ]
   },
   {
     "number": "7",
-    "name": "롤러코스터",
+    "name": "테코롤러코스터",
     "floor": "3층",
     "type": "체험",
     "location": "1-9 교실",
+    "de":"스릴 넘치는 롤러코스터<br>(85kg 제한)",
     "congestion": "none",
     "dong": "TCOE(공학부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/TLncnmN/1734598670833.jpg"
     ]
   },
   {
@@ -127,7 +132,7 @@
   },
   {
     "number": "11",
-    "name": "크리스마스 포토존 (미니게임)",
+    "name": "산타가 되는 길",
     "floor": "3층",
     "type": [
       "체험",
@@ -135,9 +140,10 @@
     ],
     "location": "공용4실",
     "congestion": "none",
+    "de":"세 가지 미션을 모두 통과하고 진정한 산타가 되어보세요!<br>(프롬, 크리스마스 콘셉트 포토존/성공 시 50명 한정 폴라로이드)",
     "dong": "KIBS(방송부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/89gZQdY/1734597908043.jpg"
     ]
   },
   {
@@ -211,7 +217,7 @@
     "de":"재밌는 실험하고 간식 받아가기",
     "dong": "시냅스 (물리, 화학, 생물융합부)",
     "images": [
-      "재밌는 실험하고 간식 받아가기"
+      "https://i.ibb.co/QmXWqgH/1734598902815.jpg"
     ]
   },
   {
@@ -229,7 +235,7 @@
   },
   {
     "number": "17",
-    "name": "범인 찾기, 과녁 맞추기",
+    "name": "범인찾기, 사격체험",
     "floor": "5층",
     "type": [
       "체험"
@@ -286,14 +292,15 @@
   },
   {
     "number": "21",
-    "name": "보물찾기, 타자 빨리 치기, 신문지 위로 올라가기",
+    "name": "뽀로로와 보물 찾기",
     "floor": "3층",
     "type": "게임",
     "location": "공용2실",
+    "de":"보물 찾기 (타자 치기, 신문에 올라가기)",
     "congestion": "none",
     "dong": " NFT(신문부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/j8sbhfd/1734597830669.jpg"
     ]
   },
   {
@@ -303,7 +310,7 @@
     "type": "제작",
     "location": "물리실",
     "congestion": "none",
-    "de":"스노우볼, 마이크 둘 중 하나 만들고 간단한 문제를 풀어 간식 뽑기하자",
+    "de":"스노우볼, 마이크 둘 중 하나 만들고 간단한 문제를 풀어 간식 뽑기하자!",
     "dong": "물리부",
     "images": [
       "https://i.ibb.co/fqy1ND2/1734591905757.jpg"
@@ -316,7 +323,7 @@
     "type": "감상",
     "location": "소공용실2",
     "congestion": "none",
-    "dong": "진로보석십자수 컬러링반",
+    "dong": "컬러링부",
     "images": [
       "https://i.ibb.co/K6hLGr1/1734591583064.jpg"
     ]
@@ -329,9 +336,9 @@
     "location": "시청각실",
     "congestion": "none",
     "de": "1. 짧은 영화를 보고 소감 작성하기<br>2. 폴라로이드 사진으로 추억 남기기",
-    "dong": "영화제작반",
+    "dong": "영화제작부",
     "images": [
-      "https://i.ibb.co/LY7ftyZ/1734589351480.jpg"
+      "https://i.ibb.co/WygBW2D/1734598559487.jpg"
     ]
   }
 ]
