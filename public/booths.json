@@ -326,10 +326,10 @@
     "name": "작품 전시",
     "floor": "5층",
     "type": "감상",
-    "de":" ",
+    "de":"<br><br><br>",
     "location": "소공용실2",
     "congestion": "none",
-    "dong": "컬러링부",
+    "dong": "컬러링반",
     "images": [
       "https://i.ibb.co/K6hLGr1/1734591583064.jpg"
     ]
