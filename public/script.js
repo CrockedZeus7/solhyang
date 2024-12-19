@@ -14,14 +14,18 @@ function loadBooths() {
         card.dataset.floor = booth.floor;
         card.dataset.type = booth.type;
           // 이 코드는 아래에서 제거한 코드임 나중에 삽입하셈
-        card.innerHTML = `
-          <img src="${booth.images[0]}" alt="부스 이미지" onclick="openSlider('${JSON.stringify(booth.images)}')" />
+          card.innerHTML = `
+          <img src="${booth.images[0]}" alt="부스 이미지" class="booth-image" />
           <div class="location">${booth.location}</div>
           <div class="congestion-level ${booth.congestion}">${getCongestionText(booth.congestion)}</div>
           <h2>${booth.name}</h2>
           <p style="font-size:12px">${booth.de}</p>
           <p style="font-size:10px">${booth.dong}</p>
         `;
+        
+        // 클릭 이벤트를 명시적으로 추가
+        const imageElement = card.querySelector(".booth-image");
+        imageElement.addEventListener("click", () => openSlider(booth.images));        
 
         boothContainer.appendChild(card);
 
@@ -111,18 +115,25 @@ let currentImages = [];
 let currentIndex = 0;
 
 function openSlider(images) {
-  currentImages = JSON.parse(images); 
+  currentImages = images;
   currentIndex = 0;
 
   if (currentImages.length > 0) {
     document.getElementById("slider-image").src = currentImages[currentIndex];
   }
-  document.getElementById("image-slider").style.display = "block";
+
+  const slider = document.getElementById("image-slider");
+  slider.style.display = "block";
+
+  slider.querySelector(".slider-content").style.animation = "zoomIn 0.4s cubic-bezier(0.42, 0, 0.58, 1.0)";
 }
 
+
 function closeSlider() {
-  document.getElementById("image-slider").style.display = "none";
+  const slider = document.getElementById("image-slider");
+  slider.style.display = "none";
 }
+
 
 function prevImage() {
   if (currentImages.length > 0) {

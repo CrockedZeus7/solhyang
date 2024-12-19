@@ -14,14 +14,15 @@
   },
   {
     "number": "2",
-    "name": "해리포터 다양한 게임",
+    "name": "호그와트 입학시험",
+    "de":"해리포터 4개 기숙사별 게임",
     "floor": "1층",
     "type": "게임",
     "location": "소담도서관",
     "congestion": "none",
     "dong": "책다솜 (도서부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/SwP6n3S/1734601091549.jpg"
     ]
   },
   {
@@ -94,7 +95,7 @@
   },
   {
     "number": "7",
-    "name": "테코롤러코스터",
+    "name": " 롤러코스터",
     "floor": "3층",
     "type": "체험",
     "location": "1-9 교실",
@@ -163,7 +164,7 @@
   },
   {
     "number": "12",
-    "name": "퀴즈쿠키즈!(퀴즈), 오늘의 운세는?",
+    "name": "퀴즈 맞추기, 성격 검사",
     "floor": "5층",
     "type": [
       "체험",
@@ -171,9 +172,10 @@
     ],
     "location": "공용7실",
     "congestion": "none",
+    "de":"퀴즈 맞추기,<br> 성격검사 상품 증정",
     "dong": "BIT(코딩부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/gTsMWZn/1734599443105.png"
     ]
   },
   {
@@ -277,7 +279,7 @@
   },
   {
     "number": "20",
-    "name": "간식릴레이, 제자리멀리뛰기 명예의전당",
+    "name": "간식 릴레이 미션",
     "floor": "4층",
     "type": [
       "게임",
@@ -285,9 +287,10 @@
     ],
     "location": "도담도담 학습카페",
     "congestion": "none",
+    "de":"체지부를 이겨라!<br>누구든 자신 있으면 도전하라.😎",
     "dong": "체육지원부",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/LJWLJmt/1734599876926.jpg"
     ]
   },
   {
