@@ -181,7 +181,8 @@
   },
   {
     "number": "13",
-    "name": "방탈출(M)",
+    "name": "1타 강사 현우잔의 살인사건",
+    "de":"범인 찾기,<br> 간식 증정,<br> 폴라로이드 사진",
     "floor": "4층",
     "type": [
       "체험",
@@ -191,7 +192,7 @@
     "congestion": "none",
     "dong": "MES (수학주제탐구부)",
     "images": [
-      "http://via.placeholder.com/470x313"
+      "https://i.ibb.co/GTMMvJm/1734615568054.jpg"
     ]
   },
   {
